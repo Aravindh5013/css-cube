@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+<title>cube</title>
+<style>
+body,html{
+	height:100%;
+	width:100%
+	margin:0px;
+	padding:0px;
+	background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#7B7BA8), to(#4A6641), color-stop(.6,#858585));
+	overflow:hidden;
+	}
+#socialNetworks
+{
+	width:100%;
+	-webkit-perspective:800;
+	
+}
+#shape
+{
+	top:170px;
+	height:250px;
+	width:250px;
+	position:relative;
+	margin:0 auto;
+	-webkit-animation: spin 9s infinite linear;
+	-webkit-transform-style:preserve-3d;
+}
+@-webkit-keyframes spin{
+	from{ -webkit-transform:rotateX(0deg) rotateY(0deg) rotateZ(0);}
+	to{   -webkit-transform:rotateX(-360deg) rotateY(-360deg) rotateZ(-360deg) ;}
+}
+#shape > div{
+	position:absolute;
+	-webkit-transtion:-webkit-transform 9s;
+}
+.facebook
+{
+	-webkit-transform:rotateX(90deg) translateZ(125px);
+	
+}
+.twitter{
+	-webkit-transform: translateZ(125px);
+}
+.quora{
+	-webkit-transform: rotateY(90deg) translateZ(125px);
+}
+.instagram{
+	-webkit-transform: rotateY(180deg) translateZ(125px);
+}
+.tumblr{
+	-webkit-transform: rotateY(-90deg) translateZ(125px);
+}
+.pinterest{
+	-webkit-transform: rotateX(-90deg) translateZ(125px)
+}
+h1{
+	font-family:lucida calligraphy;
+	font-weight:bold;
+	font-size:50px;
+	text-align:center;
+	}
+
+
+</style>
+<body>
+<h1>Social Networks</h1>
+<div id="socialNetworks">
+	<div id="shape">
+		<div class="facebook"><a href="#"><img src="img/fb.jpg" width="250" height="250"></a></div>
+		<div class="twitter"><a href="#"><img src="img/twitter.jpg" width="250" height="250"></a></div>
+		<div class="quora"><a href="#"><img src="img/quora.jpg" width="250" height="250"a></div>
+		<div class="instagram"><a href="#"><img src="img/instagram.jpg" width="250" height="250"></a></div>
+		<div class="tumblr"><a href="#"><img src="img/tumblr.jpg" width="250" height="250"></a></div>
+		<div class="pinterest"><a href="#"><img src="img/pinterest.jpg" width="250" height="250"></a></div>
+	</div>
+</div>
+<script src="jquery-1.11.3.min.js"></script>
+</body>
+</html>
